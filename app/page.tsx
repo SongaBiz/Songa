@@ -13,10 +13,10 @@ export default function Home() {
     <div>
       <Hero />
       <AboutUs />
-      <Partnerships/>
+      {/* <Partnerships/> */}
       <Cards />
-      <Careers/>
-      <Blog />
+      {/* <Careers/> */}
+      {/* <Blog /> */}
       <RiderRegistration />
     </div>
   )
