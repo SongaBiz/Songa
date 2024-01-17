@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles/globals.css */
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  transition: scroll-behavior 300s ease-in-out;
+
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.step-container::before {
+  content: "";
+  position: absolute;
+  background: #f3e7f3;
+  height: 4px;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.roads {
+  display: none;
+}
+
+.frosted-glass {
+  background-color: rgba(255, 255, 255, 0.15); /* Adjust the opacity for the frosted effect */
+  backdrop-filter: blur(28px); /* Adjust the blur value for more/less frosted effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+input:-webkit-autofill {
+  /* Set the background color to transparent */
+  -webkit-box-shadow: 0 0 0 30px transparent inset;
+}
+
+/* Optional: Override the default autofill styles for text and background color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff; /* Text color */
+  background-color: transparent; /* Background color */
+}
+
