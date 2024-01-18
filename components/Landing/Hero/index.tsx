@@ -32,7 +32,7 @@ export const Hero = () => {
         setCurrentIndex(newIndex);
     };
 
-    const goToSlide = (slideIndex) => {
+    const goToSlide = (slideIndex: number) => {
         setCurrentIndex(slideIndex);
       };
 
