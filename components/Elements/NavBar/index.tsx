@@ -43,7 +43,7 @@ export const NavBar = () => {
   return (
     <div className='top-0 text-white text-lg h-auto min-w-full drop-shadow-lg absolute z-10 px-12 py-5'>
       <div>
-        <div className='flex items-center justify-between '>
+        <div className='flex items-center justify-between'>
           <div>
             <Image
               src='/assets/images/songa-black-logo.png'
@@ -67,7 +67,6 @@ export const NavBar = () => {
                 )}>{navLink.title}</Link>
               ))}
             </div>
-
           </div>
 
           <div className='hidden md:flex justify-between items-center md:space-x-2 lg:space-x-6 mr-8'>
@@ -78,7 +77,7 @@ export const NavBar = () => {
           </div> */}
             <div>
               <button>
-                <Link href='/' className='border border-[#A90000] rounded-3xl flex items-center justify-center px-4 w-[97px] h-[48px] flex-shrink-0 py-1 '>
+                <Link href='/' className='border border-[#A90000] rounded-3xl flex items-center justify-center px-4 w-[92px] h-[32px] flex-shrink-0 py-1 '>
                   <p className={`${sans_hebrew.className} text-[14px] leading-none font-bold text-[#020202]`}>Sign Up</p>
                 </Link>
               </button>
