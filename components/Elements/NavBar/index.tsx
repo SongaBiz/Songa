@@ -3,7 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ReactComponentElement, useState} from 'react'
 import { AiOutlineArrowRight, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
-
+import { sans_hebrew } from '@/app/ui/fonts'
+import { useRouter } from 'next/router'
 
 const navLinks = [
   {
@@ -23,19 +24,15 @@ const navLinks = [
   },
   {
     id:4,
-    title:'Blogs',
-    url:'/blogs'
-  },
-  {
-    id:5,
     title:'SONGA Enterprise',
-    url:'enterprise'
+    url:'/enterprise'
   },
   {
     id:6,
     title:'Contact Us',
-    url:'contact'
-  },
+    url:'/contact'
+  }
+  
 ]
 export const NavBar = () => {
   const [nav, setNav] = useState(false)
@@ -58,7 +55,7 @@ export const NavBar = () => {
             {/* map through the array to display each link */}
             <div className='md:px-2 md:text-sm lg:px-4 lg:text-lg'>
               {navLinks.map(navLink=>(
-                <Link key={navLink.id} href={navLink.url} className="mx-2 lg:mx-4 text-[14px]">{navLink.title}</Link>
+                <Link key={navLink.id} href={navLink.url} className={`${sans_hebrew.className} mx-2 lg:mx-4 text-[14px] text-[#020202] font-bold leading-normal`}>{navLink.title}</Link>
               ))}
             </div>
           </div>
@@ -71,9 +68,8 @@ export const NavBar = () => {
           </div> */}
             <div>
               <button>
-                <Link href='/' className='border border-[#FB4552] rounded-full flex items-center justify-center px-4  py-1  hover:bg-black text-[14px]'>
-                  Sign Up
-                  <AiOutlineArrowRight className='w-5 h-5 text-[#FB4552] ml-2'/>
+                <Link href='/' className='border border-[#A90000] rounded-3xl flex items-center justify-center px-4 w-[97px] h-[48px] flex-shrink-0 py-1 '>
+                  <p className={`${sans_hebrew.className} text-[14px] leading-none font-bold text-[#020202]`}>Sign Up</p>
                 </Link>
               </button>
             </div>
