@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { ReactComponentElement, useState} from 'react'
 import { AiOutlineArrowRight, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { sans_hebrew } from '@/app/ui/fonts'
+import { usePathname } from 'next/navigation';
+import { clsx } from 'clsx'
 import { useRouter } from 'next/router'
 
 const navLinks = [
@@ -37,13 +39,14 @@ const navLinks = [
 export const NavBar = () => {
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
+  const pathname = usePathname()
   return (
-    <div className='top-0 text-white text-lg h-auto min-w-full drop-shadow-lg absolute z-10 px-10'>
-      <div className="border-b-[1px] border-white/20">
+    <div className='top-0 text-white text-lg h-auto min-w-full drop-shadow-lg absolute z-10 px-12 py-5'>
+      <div>
         <div className='flex items-center justify-between '>
-          <div className=''>
+          <div>
             <Image
-              src='/assets/icons/SONGA-red-logo.png'
+              src='/assets/images/songa-black-logo.png'
               alt='Songa Logo'
               width={125}
               height={100}
@@ -55,9 +58,16 @@ export const NavBar = () => {
             {/* map through the array to display each link */}
             <div className='md:px-2 md:text-sm lg:px-4 lg:text-lg'>
               {navLinks.map(navLink=>(
-                <Link key={navLink.id} href={navLink.url} className={`${sans_hebrew.className} mx-2 lg:mx-4 text-[14px] text-[#020202] font-bold leading-normal`}>{navLink.title}</Link>
+                <Link 
+                  key={navLink.id} 
+                  href={navLink.url} 
+                  className={clsx(
+                  'mx-2 lg:mx-4 text-[14px] text-[#020202] font-bold leading-normal',
+                  {'border-b-2  border-red-[#A90000]': pathname === navLink.url }
+                )}>{navLink.title}</Link>
               ))}
             </div>
+
           </div>
 
           <div className='hidden md:flex justify-between items-center md:space-x-2 lg:space-x-6 mr-8'>
