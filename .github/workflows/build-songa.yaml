@@ -1,7 +1,6 @@
 name: Build and Deploy Songa User Interface
 on:
   push:
-  pull_request: 
     branches:
       - main
 
