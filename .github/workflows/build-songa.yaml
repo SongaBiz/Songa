@@ -27,7 +27,7 @@ jobs:
         run: sshpass -p '${{ secrets.SERVER_PASSWORD }}' scp -r /home/runner/work/Songa/Songa/* ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/var/www/songa.ui/
 
       - name: Install dependencies
-        run: sshpass -p '${{ secrets.SERVER_PASSWORD }}' ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} cd /var/www/songa.ui/ && npm install*
+        run: sshpass -p '${{ secrets.SERVER_PASSWORD }}' ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} cd /var/www/songa.ui/ && npm install
 
       - name: Build application
         run: sshpass -p '${{ secrets.SERVER_PASSWORD }}' ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} cd /var/www/songa.ui/ && npm run build
