@@ -29,7 +29,7 @@ jobs:
         run: mkdir -p ~/.ssh && touch ~/.ssh/known_hosts && ssh-keyscan ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
 
       - name: Remove previous files
-        run: sshpass -p '${{ secrets.SERVER_PASSWORD }}' sudo rm -rf /var/www/songa.ui/*
+        run: sshpass -p '${{ secrets.SERVER_PASSWORD }}' ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} rm -rf /var/www/songa.ui/*
         
       - name: Copy folder contents recursively
         run: sshpass -p '${{ secrets.SERVER_PASSWORD }}' scp -r /home/runner/work/Songa/Songa/* ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/var/www/songa.ui/
