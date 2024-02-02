@@ -24,8 +24,8 @@ jobs:
       - name: List file
         run: ls .
       - name: Remove previous files
-        run: ssh-keyscan ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
-
+        run: mkdir -p ~/.ssh && touch ~/.ssh/known_hosts && ssh-keyscan ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+        
       - name: Remove previous files
         run: sshpass -p '${{ secrets.SERVER_PASSWORD }}' sudo rm -rf /var/www/songa.ui/*
         
