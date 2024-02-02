@@ -24,3 +24,5 @@ jobs:
 
       - name: Build project
         run: npm run build
+      - name: List file
+        run: ls .
