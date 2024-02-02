@@ -14,7 +14,7 @@ html, body {
 
 body {
   overflow-x: hidden;
-  overflow-y: hidden;
+  
 }
 
 .step-container::before {
