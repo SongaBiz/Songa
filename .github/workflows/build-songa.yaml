@@ -24,11 +24,9 @@ jobs:
       - name: List file
         run: ls .
 
-      - name: Copy folder content recursively to remote
-        uses: garygrossgarten/github-action-scp@release
-        with:
-          local: .
-          remote: /var/www/songa.ui/
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          password: ${{ secrets.SERVER_PASSWORD }}
+      - name: Remove previous files
+        run: sshpass -p '${{ secrets.SERVER_PASSWORD }}' sudo rm -rf /var/www/songa.ui/*
+        
+      - name: Copy folder contents recursively
+        run: sshpass -p '${{ secrets.SERVER_PASSWORD }}' scp -r . ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/var/www/songa.ui/
+
