@@ -11,13 +11,13 @@ import Blog from '@/components/Landing/Blog'
 export default function Home() {
   return (
     <div>
-      <Hero />
-      <AboutUs />
+      {/* <Hero /> */}
+      {/* <AboutUs /> */}
       {/* <Partnerships/> */}
-      <Cards />
+      {/* <Cards /> */}
       {/* <Careers/> */}
       {/* <Blog /> */}
-      <RiderRegistration />
+      {/* <RiderRegistration /> */}
     </div>
   )
 }

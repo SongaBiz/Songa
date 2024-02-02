@@ -41,14 +41,14 @@ export const NavBar = () => {
   const handleClick = () => setNav(!nav)
   const pathname = usePathname()
   return (
-    <div className='top-0 bg-white h-[78px] min-w-full drop-shadow-2xl absolute z-10 px-20 py-5'>
+    <div className='bg-white top-0 w-full drop-shadow-2xl absolute z-10 px-2 py-4 md:px-6 md:py-5'>
       <div>
         <div className='flex items-center justify-between'>
           <div>
             <Image
               src='/assets/images/songa-black-logo.png'
               alt='Songa Logo'
-              width={125}
+              width={100}
               height={100}
               priority
             />
@@ -70,11 +70,11 @@ export const NavBar = () => {
           </div>
 
           <div className='hidden md:flex justify-between items-center md:space-x-2 lg:space-x-6 mr-8'>
-            {/* <div>
-            <Link href='/' className='border-none rounded-md'>
-              Log in
-          </Link>
-          </div> */}
+          <div>
+              <Link href='/'>
+                  <p className={`${sans_hebrew.className} text-[14px] leading-none font-bold text-[#020202]`}>Log In</p>
+              </Link>
+            </div>
             <div>
               <button>
                 <Link href='/' className='border border-[#A90000] rounded-3xl flex items-center justify-center px-4 w-[92px] h-[32px] flex-shrink-0 py-1 '>
@@ -85,24 +85,41 @@ export const NavBar = () => {
           </div>
 
           {/* Mobile version */}
-          <div className='md:hidden pr-6 ' onClick={handleClick}>
-            {!nav ? <AiOutlineMenu className='w-8 h-8 cursor-pointer font-bold text-black'/> : < AiOutlineClose className='w-8 h-8 cursor-pointer font-bold text-black'/>}
+          <div className='md:hidden flex items-center justify-center space-x-3 ' onClick={handleClick}>
+            <div>
+              <Link href='/'>
+                  <p className={`${sans_hebrew.className} text-[14px] leading-none font-bold text-[#020202]`}>Log In</p>
+              </Link>
+            </div>
+            <div>
+              <button >
+                <Link href='/' className='border border-[#A90000] rounded-3xl flex items-center justify-center px-2 w-[78px] h-[28px] flex-shrink-0'>
+                    <p className={`${sans_hebrew.className} text-[14px] leading-none font-bold text-[#020202]`}>Sign Up</p>
+                  </Link>
+              </button>
+            </div>
+            {!nav ? <AiOutlineMenu className='w-4 h-4 cursor-pointer font-bold text-black'/> : < AiOutlineClose className='w-4 h-4 cursor-pointer font-bold text-black'/>}
           </div>
         </div>
 
-        <div className={!nav ? 'hidden' : 'flex flex-col items-center justify-center bg-black text-lg border-b-2 border-green-100'}>
-          {navLinks.map(link=>(
-            <Link key={link.id} href={link.url} className='py-4 xl:hidden '>{link.title}
+        <div className={!nav ? 'hidden' : 'flex flex-col items-start font-bold justify-start bg-white w-full h-screen'}>
+          {navLinks.map(navLink=>(
+            <Link key={navLink.id} 
+                  href={navLink.url} 
+                  className={clsx(
+                    'mx-2 py-4 text-[16px] text-[#020202] font-bold leading-normal',
+                    {'border-b-2  border-red-[#A90000]': pathname === navLink.url })}>
+                      {navLink.title}
             </Link>
           ))}
-          <div className='flex flex-col mb-4 md:hidden'>
-            <button className='border border-[#FB4552] rounded-full py-2 px-4 text-white flex items-center justify-center space-x-3'>
-              <Link href='/'>Sign Up</Link>
-              <AiOutlineArrowRight className='w-5 h-5 text-[#FB4552] ml-2'/>
+          {/* <div className='flex flex-col mb-4 md:hidden'>
+            <button >
+              <Link href='/' className='border border-[#A90000] rounded-3xl flex items-center justify-center px-4 w-[92px] h-[32px] flex-shrink-0 py-1 '>
+                  <p className={`${sans_hebrew.className} text-[14px] leading-none font-bold text-[#020202]`}>Sign Up</p>
+                </Link>
             </button>
-          </div>
+          </div> */}
         </div>
-
       </div>
     </div>
   )
