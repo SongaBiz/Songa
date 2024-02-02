@@ -1,6 +1,7 @@
 name: Build and Deploy Songa User Interface
 on:
   push:
+  pull_request: 
     branches:
       - main
 
@@ -18,8 +19,17 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-        
+
       - name: Build project
         run: npm run build
       - name: List file
         run: ls .
+
+      - name: Copy folder content recursively to remote
+        uses: garygrossgarten/github-action-scp@release
+        with:
+          local: .
+          remote: /var/www/songa.ui/
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASSWORD }}
