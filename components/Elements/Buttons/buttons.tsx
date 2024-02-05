@@ -6,6 +6,12 @@ interface StoreButtons {
     url:string;
     icon: string;
 }
+
+interface HeroButtons {
+  text: string;
+  url: string;
+}
+
 export const StoreButtons = ({ text, url, icon }: StoreButtons) => {
   return (
     <div className='pt-4'>
@@ -18,4 +24,14 @@ export const StoreButtons = ({ text, url, icon }: StoreButtons) => {
   )
 }
 
-export default StoreButtons
+export const HeroButtons = ({ text, url }: HeroButtons) => {
+  return (
+    <div className='pt-4'>
+        <Link href={url}>
+            <button className='border-none bg-[#A90000] font-bold px-12 py-[8px] w-[250px] outline-none text-[#ffffff] text-center text-[16px] rounded-lg hover:bg-[#009245]'>
+                 {text}
+            </button>
+        </Link>
+    </div>
+  )
+}
