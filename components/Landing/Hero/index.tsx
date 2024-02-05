@@ -23,7 +23,7 @@ export const Hero = () => {
                 <div className="md:grid md:grid-cols-2 md:pt-8">
                     <div className="text-white w-full px-4  md:px-8">
                         <h1 className={`${sans_hebrew.className} tracking-normal text-[28px] md:tracking-widest md:text-[48px] leading-2 font-bold`}>DIGITIZING THE BODA <br/> TRANSFORMING <span className='text-[#A90000]'>LIVES</span></h1>
-                        <p className={`${sans_hebrew.className} tracking-normal text-[#000000] font-light text-md md:leading-2 md:tracking-[.45em] text-[24px] my-8`}>
+                        <p className={`${sans_hebrew.className} tracking-normal text-[#000000] font-light text-md md:leading-2 md:tracking-[.25em] text-[24px] my-8`}>
                             Enjoy the convenience of our <br /> digital services using our <br />apps
                         </p>
                         <div className='flex flex-col pt-2 md:flex-row md:w-full'>
