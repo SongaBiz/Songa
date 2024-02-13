@@ -19,3 +19,15 @@ interface BikeDetails {
     insuranceProvider: string,
     insurancePolicyNumber: string
 }
+interface CustomerProfile{
+    name: "string",
+    gender: "string"
+}
+interface VehicleProfile {
+    make: "string",
+    model: "string",
+    registrationNumber: "string",
+    insuranceProviderName: "string",
+    insurancePolicyNumber: "string",
+    insurancePolicyExpiryDate: "2024-02-13T08:46:53.014Z"
+}
