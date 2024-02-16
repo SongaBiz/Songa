@@ -1,7 +1,8 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
+import { FilteredUser, UserLoginResponse, UserResponse } from "./types"
 import { toast } from "react-toastify";
 
-const BASE_URL = 'https://api.songa.app';
+const BASE_URL = 'https://uat-api.songabusiness.co.ke';
 
 interface ErrorMessage  {
   error: object

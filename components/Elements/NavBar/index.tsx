@@ -71,7 +71,7 @@ export const NavBar = () => {
 
           <div className='hidden md:flex justify-between items-center md:space-x-2 lg:space-x-6 mr-8'>
           <div>
-              <Link href='/'>
+              <Link href='/login'>
                   <p className={`${sans_hebrew.className} text-[14px] leading-none font-bold text-[#020202]`}>Log In</p>
               </Link>
             </div>
