@@ -21,9 +21,9 @@ const ServicesOffered = () => {
                             alt='bike image'
                             width={420}
                             height={540}
-                            className='md:pl-20 opacity-60'
+                            className='md:pl-20 opacity-60 hidden lg:block'
                         />
-                        <div className="text-white text-[24px] font-bold mb-5">
+                        <div className="text-white text-[24px] font-bold my-5">
                             REQUEST A TRIP
                         </div>
                     </div>
@@ -42,9 +42,9 @@ const ServicesOffered = () => {
                             alt='bike image'
                             width={420}
                             height={540}
-                            className='md:pl-20 opacity-60'
+                            className='md:pl-20 opacity-60 hidden lg:block'
                         />
-                        <div className="text-white text-[24px] font-bold mb-5">
+                        <div className="text-white text-[24px] font-bold my-5">
                             HIRE OUR RIDERS
                         </div>
                     </div>
