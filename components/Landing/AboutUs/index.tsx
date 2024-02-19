@@ -7,7 +7,7 @@ import { HeroButtons } from '@/components/Elements/Buttons/buttons';
 const AboutUs: React.FC = () => {
   return (
     <div id="about" className='w-auto h-auto bg-white md:flex'>
-      <div className='pt-9 flex flex-col flex-1 items-center mx-12 md:w-1/2 md:items-start md:px-12'>
+      <div className='lg:pt-9 md:pt-4 flex flex-col flex-1 items-center mx-12 md:w-1/2 md:items-start md:px-12'>
         <div className="lg:w-[362px] h-[89px] text-black text-3xl font-bold">
           About Us
         </div>
@@ -30,7 +30,7 @@ const AboutUs: React.FC = () => {
             alt='bike image'
             width={420}
             height={540}
-            className='md:pl-20'
+            className='md:pl-20 hidden lg:block'
           />
         </div>
         {/* <div className='flex flex-col gap-y-4 md:w-full md:flex-row md:justify-between md:items-center mt-8'>
@@ -50,14 +50,14 @@ const AboutUs: React.FC = () => {
           </div>
         </div> */}
       </div>
-      <div className='pt-9 flex flex-col flex-1 items-center mx-12 md:w-1/2 md:items-start md:px-12'>
+      <div className='lg:pt-9 md:pt-4 flex flex-col flex-1 items-center mx-12 md:w-1/2 md:items-start md:px-12'>
         <div className='flex items-center justify-center'>
           <Image
             src='/assets/images/bike.png'
             alt='bike image'
             width={420}
             height={540}
-            className='md:pl-20'
+            className='md:pl-20 hidden lg:block'
           />
         </div>
         <div className="lg:w-[362px] h-[89px] text-black text-3xl font-bold">
