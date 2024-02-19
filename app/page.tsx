@@ -6,6 +6,7 @@ import Cards from '@/components/Landing/Cards'
 import Partnerships from '@/components/Landing/Partnerships'
 import Careers from '@/components/Landing/Careers'
 import Blog from '@/components/Landing/Blog'
+import ServicesOffered from '@/components/Landing/ServicesOffered';
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <AboutUs />
       {/* <Partnerships/> */}
+      <ServicesOffered />
       <Cards />
       {/* <Careers/> */}
       {/* <Blog /> */}
