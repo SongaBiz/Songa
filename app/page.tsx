@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import RiderRegistration from '@/components/Landing/RiderRegistration'
-import { Hero } from '../components'
+import { Hero, Mission } from '../components'
 import AboutUs from '../components/Landing/AboutUs'
 import Cards from '@/components/Landing/Cards'
 import Partnerships from '@/components/Landing/Partnerships'
@@ -17,6 +17,7 @@ export default function Home() {
       {/* <Partnerships/> */}
       <ServicesOffered />
       <Cards />
+      <Mission />
       {/* <Careers/> */}
       {/* <Blog /> */}
       <RiderRegistration />
