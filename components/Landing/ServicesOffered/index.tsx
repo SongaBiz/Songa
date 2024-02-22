@@ -4,7 +4,7 @@ import React from 'react';
 const ServicesOffered = () => {
     return (
         <div>
-            <div className="text-black text-[24px] font-bold mb-4 text-center">
+            <div className="lg:pt-[95px] text-black text-[24px] font-bold mb-4 text-center">
                 Our Services
             </div>
             <div className='bg-green lg:flex lg:flex-1 items-center'>
