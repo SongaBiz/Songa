@@ -1,55 +1,74 @@
 import Image from 'next/image';
+import Cards from '@/components/Landing/Cards';
 import React from 'react';
 
 const ServicesOffered = () => {
     return (
-        <div>
-            <div className="lg:pt-[95px] text-black text-[24px] font-bold mb-4 text-center">
+        <div className='bg-green py-2'>
+            <div className="lg:pt-[50px] sm:pt-[10px] text-black text-[30px] font-bold mb-4 text-center leading-[31.2px]">
                 Our Services
             </div>
-            <div className='bg-green lg:flex lg:flex-1 items-center'>
-                <div className='mx-12 my-8'>
-                    <div className="text-white text-[30px] font-bold mb-5 text-center">
-                        RIDE HAILING
+            <div className='lg:flex lg:flex-col lg:flex-1'>
+                <div className='mx-20 my-8'>
+                    <div className="text-white text-[24px] font-bold mb-5 md:pl-20 text-center md:text-left">
+                        DELIVERIES
                     </div>
-                    <div className="text-center px-8 md:px-0 text-lg md:text-justify text-white text-[19px] font-semibold leading-normal">Instead of walking to the stage or stop a stranger ,
-                        SONGA gives you the option of riding on a known
-                        rider at the same stage price.</div>
-                    <div className='flex flex-col items-center justify-center'>
+                    <div className='flex justify-center'>
                         <Image
-                            src='/assets/images/bike.png'
+                            src='/assets/images/LoadedBike.jpg'
                             alt='bike image'
-                            width={420}
-                            height={540}
-                            className='md:pl-20 opacity-60 hidden lg:block'
+                            width={600}
+                            height={450}
+                            className='md:pl-20 md:pr-10 opacity-60 hidden lg:block'
                         />
-                        <div className="text-white text-[24px] font-bold my-5">
-                            REQUEST A TRIP
+                        <div className="flex flex-col flex-1 space-y-9">
+                            <div className="px-8 md:px-0 text-lg md:text-justify text-white text-[19px] font-semibold leading-normal">SONGA works with riders to ensure customer goods
+                                are delivered as well as being able to pick goods for
+                                our customers and deliver them to their preferred
+                                destination.</div>
+                            <div className="hidden lg:block">
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                            </div>
+                            <div className="text-white text-[24px] font-bold my-5 text-center lg:text-left">
+                                REQUEST FOR A DELIVERY
+                            </div>
                         </div>
                     </div>
 
                 </div>
-                <div className='mx-12 my-8'>
-                    <div className="text-white text-[30px] font-bold mb-5 text-center">
-                        CORPORATE GIGS
+                <div className='mx-20 my-8'>
+                    <div className="text-white text-[24px] font-bold mb-5 md:pl-20 text-center md:text-left">
+                        RIDE HAILING
                     </div>
-                    <div className="text-center px-8 md:px-0 text-lg md:text-justify text-white text-[19px] font-semibold leading-normal">Have a short time need for riders ? SONGA let’s work
-                        with a team of bodaboda riders who have been vetted
-                        trained and can be trusted. </div>
-                    <div className='flex flex-col items-center justify-center'>
+                    <div className='flex justify-center'>
                         <Image
-                            src='/assets/images/bike.png'
+                            src='/assets/images/MovingBike.jpg'
                             alt='bike image'
-                            width={420}
-                            height={540}
-                            className='md:pl-20 opacity-60 hidden lg:block'
+                            width={600}
+                            height={450}
+                            className='md:pl-20 md:pr-10 opacity-60 hidden lg:block'
                         />
-                        <div className="text-white text-[24px] font-bold my-5">
-                            HIRE OUR RIDERS
+                        <div className="flex flex-col flex-1 space-y-9">
+                            <div className="px-8 md:px-0 text-lg md:text-justify text-white text-[19px] font-semibold leading-normal">With our riders distributed  everywhere ,
+                                you can now request for a trip at a cheaper prices with convenience at best/</div>
+                            <div className="hidden lg:block">
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                            </div>
+                            <div className="text-white text-[24px] font-bold my-5 text-center lg:text-left">
+                                HIRE OUR RIDERS
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
+            <Cards />
         </div>
     )
 }
