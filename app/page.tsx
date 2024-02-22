@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import RiderRegistration from '@/components/Landing/RiderRegistration'
-import {  Hero, LandingFooter, Mission } from '../components'
+import {  Hero, LandingFooter, Mission, Trustees} from '../components'
 import AboutUs from '../components/Landing/AboutUs'
 import Cards from '@/components/Landing/Cards'
 import Partnerships from '@/components/Landing/Partnerships'
@@ -13,6 +13,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
+      <Trustees />
       <AboutUs />
       {/* <Partnerships/> */}
       <ServicesOffered />
