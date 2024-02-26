@@ -63,7 +63,7 @@ export default function LearnMore() {
                                     />
                                     <p className='text-black p-2 text-[17px] font-medium'>We have services fit for the Kenyan economy and promos fit to client's travel hours. Our technology is up to date and so are our services.</p>
                                 </div>
-                                <p className="lg:text-green text-[26px] font-medium">24HR <br></br>SERVICE</p>
+                                <p className="lg:text-green text-[26px] font-medium">24Hrs <br></br>SERVICE</p>
                             </div>
                         </div>
                     </div>
