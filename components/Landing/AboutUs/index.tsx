@@ -2,56 +2,44 @@
 import Image from 'next/image';
 import React from 'react';
 import Link from 'next/link';
+import { HeroButtons } from '@/components/Elements/Buttons/buttons';
 
 const AboutUs: React.FC = () => {
   return (
-    <div id="about" className='w-auto h-auto bg-white md:flex'>
-      <div className='pt-5 flex flex-col flex-1 items-center mx-12 md:w-1/2 md:items-start md:px-12'>
-        <div className="lg:w-[362px] h-[89px] text-black text-6xl font-bold leading-10">
+    <div id="about" className='w-auto h-auto bg-white'>
+      <div className='lg:pt-9 md:py-10 flex flex-col items-center mx-12 md:px-12 lg:px-[297px]'>
+        <div className="text-black text-[36px] font-bold text-center">
           About Us
         </div>
-        <div className="w-[165px] h-[18px] mb-4 mt-2 relative">
+        <div className='w-[109px] h-[10px] bg-[#FF0202] mt-2 mb-4'></div>
+        <div className="px-8 md:px-0 text-lg md:text-justify text-black text-[14px] font-semibold leading-normal">With a clear understanding of how boda works , SONGA aims
+          to digitize boda  stakeholders experience by making their
+          engagement and processes digital.</div>
+      </div>
+      <div className='lg:pt-9 pt-5 md:py-10 flex flex-1 sm:py-10'>
+        <div className='mt-10 flex'>
           <Image
-            src='/assets/images/miniflag.png'
-            alt='Kenyan miniflag'
-            fill={true}
+            src='/assets/images/boda.jpg'
+            alt='bike image'
+            width={902}
+            height={836}
+            className='hidden lg:block'
           />
         </div>
-        <div className="text-center mt-4 px-8 md:px-0 text-lg md:text-justify text-black text-[14px] font-semibold leading-normal">SONGA is the technology of a digital bodaboda ecosystem shared between riders and passengers through an app.</div>
-        <div className='my-4'>
-          <button className='rounded-md border border-[#FB4552]'>
-            <Link href='/' className='p-8 text-lg text-black font-bold'>Learn more</Link>
-          </button>
-        </div>
-        <div className='flex flex-col gap-y-4 md:w-full md:flex-row md:justify-between md:items-center mt-8'>
-            <div className="w-[117px] h-[125.93px] relative">
-              <div className="w-[117px] h-[69px] left-0 top-0 absolute"><span className="text-green-600 text-[40px] font-extrabold leading-10">+</span><span className="text-green-600 text-[70px] font-extrabold leading-10">1</span><span className="text-green-600 text-[32px] font-normal leading-5">K</span></div>
-              <div className="w-[110.04px] h-[17.93px] left-[38px] top-[78px] md:top-[108px] absolute text-green-600 text-[20px] font-semibold leading-relaxed">RIDERS</div>
-            </div>
-
-          <div className="w-[142px] h-[125.93px] relative">
-            <div className="w-[142px] h-[69px] left-0 top-0 absolute"><span className="text-green-600 text-[40px] font-extrabold leading-10">+</span><span className="text-green-600 text-[70px] font-extrabold leading-10">10</span><span className="text-green-600 text-[32px] font-normal leading-5">K</span></div>
-            <div className="w-[66.44px] h-[17.93px] left-[38px] top-[78px] md:top-[108px] absolute text-green-600 text-[20px] font-semibold leading-relaxed">TRIPS</div>
+        <div className='flex flex-col flex-1 md:px-[20px] md:py-20 items-center lg:items-start'>
+          <div className="text-black text-[36px] font-bold">
+            Who We Are
           </div>
-
-          <div className="w-[147px] h-[125.93px] relative">
-            <div className="w-[147px] h-[69px] left-0 top-0 absolute"><span className="text-green-600 text-[70px] font-extrabold leading-10">24</span><span className="text-green-600 text-[32px] font-normal leading-10">Hrs</span></div>
-            <div className="w-[96.88px] h-[17.93px] left-[25px] top-[78px] md:top-[108px] absolute text-green-600 text-[20px] font-semibold leading-relaxed">SERVICE</div>
+          <div className='w-[109px] h-[10px] bg-[#FF0202] mt-2 mb-4'></div>
+          <div className="px-8 md:px-0 text-lg md:text-justify text-black text-[14px] font-semibold leading-normal">We are an ERP solution provider who’ve tailored our app to solve bodaboda problems.
+            We incorporate 21C tech to improve rider experience which transform how we consume bodaboda services..</div>
+          <div className='my-12 md:py-12'>
+            <HeroButtons text='Learn More' url='/learn-more' />
           </div>
         </div>
+      </div>
     </div>
-    <div className='mt-20 flex items-center justify-center'>
-      <Image
-        src='/assets/images/bike.png'
-        alt='bike image'
-        width={420}
-        height={540}
-        className='md:pl-20'
-      />
-    </div>
-
-</div>
-);
+  );
 };
 
 export default AboutUs;

@@ -41,7 +41,7 @@ export const NavBar = () => {
   const handleClick = () => setNav(!nav)
   const pathname = usePathname()
   return (
-    <div className='bg-white top-0 w-full drop-shadow-2xl absolute z-10 px-2 py-4 md:px-6 md:py-5'>
+    <div className='bg-white top-0 w-full drop-shadow-2xl absolute z-10 px-2 py-4 md:px-6 md:py-5 relative'>
       <div>
         <div className='flex items-center justify-between'>
           <div>
