@@ -103,7 +103,7 @@ export default function RiderDetails({ stepsCount, stepNumber, updateFields, nex
       await createRiderAccount({
         first_name: data.first_name,
         last_name: data.last_name,
-        phone: `+${data.phone_no}`,
+        // phone: `+${data.phone_no}`,
         password: data.password
       });
       next();

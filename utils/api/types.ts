@@ -1,7 +1,5 @@
-interface CreateRiderData {
-    first_name: string;
-    last_name: string;
-    phone: string;
+interface CreateUserData {
+    username: string;
     password: string;
 }
 

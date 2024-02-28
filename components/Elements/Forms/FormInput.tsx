@@ -20,7 +20,7 @@ export default function FormInput({ label, type, name, required, value, placehol
         <div className='flex flex-col gap-1'>
             <div className='flex flex-col space-y-3'>
                 <label htmlFor={label}>{label}</label>
-                <input placeholder={placeholder} value={value} type={type} {...register(name)} required={required} onChange={onChange} className='bg-transparent border-[#FB4552] border-[1px] h-12 rounded-lg px-4' />
+                <input placeholder={placeholder} value={value} type={type} {...register(name)} required={required} onChange={onChange} className='bg-transparent border-[#000000] border-[1px] h-12 rounded-lg px-4' />
             </div>
             {errors[name] && (
                 <span className='text-red-500 text-xs pt-1 block'>

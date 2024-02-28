@@ -1,5 +1,4 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
-import { FilteredUser, UserLoginResponse, UserResponse } from "./types"
 import { toast } from "react-toastify";
 
 const BASE_URL = 'https://uat-api.songabusiness.co.ke';
@@ -18,13 +17,13 @@ function hasSession(): boolean {
   return sessionToken !== null && userId !== null;
 }
 
-export async function createRiderAccount(data: CreateRiderData): Promise<CustomResponse<any>> {
+export async function createUserAccount(data: CreateUserData): Promise<CustomResponse<any>> {
   // Check if sessionToken and userId already exist in local storage
   if (hasSession()) {
     throw { error: 'You already have an account.' };
   }
 
-  const endpoint = `${BASE_URL}/api/riders/auth/create-rider-account`;
+  const endpoint = `${BASE_URL}/Account/Register`;
 
   const requestOptions: AxiosRequestConfig = {
     method: 'POST',
@@ -38,15 +37,15 @@ export async function createRiderAccount(data: CreateRiderData): Promise<CustomR
     const response = await axios(endpoint, requestOptions);
     toast.success(response.data.message);
 
-    const sessionToken = response.data.rider.sessionToken;
-    const userId = response.data.rider.id;
+    const sessionToken = response.data.user.sessionToken;
+    const userId = response.data.user.id;
 
     localStorage.setItem('sessionToken', sessionToken);
     localStorage.setItem('userId', userId);
 
     return response;
   } catch (e: any) {
-    if (e.response && e.response.data && e.response.data.message === 'Forbiden. Rider already exists') {
+    if (e.response && e.response.data && e.response.data.message === 'Forbiden. User already exists') {
       // Show a custom toast message for "rider exists" error
       // toast.error('The rider already exists. Please use a different phone no.');
       throw { error: 'The rider already exists. Please use a different phone no.' };
