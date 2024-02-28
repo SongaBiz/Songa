@@ -41,7 +41,7 @@ export default function LearnMore() {
                                     <Image className='w-20 mx-4 mt-[-2rem] md:mt-2 rounded-full hidden md:block'
                                         src='/assets/icons/card1-icon.png' alt='safety-icon' width={57} height={42}
                                     />
-                                    <p className='text-black p-2 text-[17px] font-medium'>Our riders are vetted. Safety begins with you and everyone in  the society is tasked with their safety and those around them.</p>
+                                    <p className='text-black p-2 text-[17px] font-medium'>Our riders are vetted. Safety begins with you and everyone in the society is tasked with their safety and those around them.</p>
                                 </div>
                                 <p className="lg:text-green text-[26px] font-medium">+1K <br></br>RIDERS</p>
                             </div>
@@ -61,7 +61,7 @@ export default function LearnMore() {
                                     <Image className='w-20 mx-4 mt-[-2rem] md:mt-2 rounded-full hidden md:block'
                                         src='/assets/icons/card3-icon.png' alt='safety-icon' width={57} height={42}
                                     />
-                                    <p className='text-black p-2 text-[17px] font-medium'>We have services fit for the Kenyan economy and promos fit to client's travel hours. Our technology is up to date and so are our services.</p>
+                                    <p className='text-black p-2 text-[17px] font-medium'>We have services fit for the Kenyan economy and promos fit to client&apos;s travel hours. Our technology is up to date and so are our services.</p>
                                 </div>
                                 <p className="lg:text-green text-[26px] font-medium">24Hrs <br></br>SERVICE</p>
                             </div>
