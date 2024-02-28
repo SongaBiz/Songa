@@ -31,7 +31,7 @@ const AboutUs: React.FC = () => {
             Who We Are
           </div>
           <div className='w-[109px] h-[10px] bg-[#FF0202] mt-2 mb-4'></div>
-          <div className="px-8 md:px-0 text-lg md:text-justify text-black text-[14px] font-semibold leading-normal">We are an ERP solution provider who’ve tailored our app to solve bodaboda problems.
+          <div className="px-8 md:px-0 text-lg md:text-justify text-black text-[14px] font-semibold leading-normal">We are an ERP solution provider who&apos;ve tailored our app to solve bodaboda problems.
             We incorporate 21C tech to improve rider experience which transform how we consume bodaboda services..</div>
           <div className='my-12 md:py-12'>
             <HeroButtons text='Learn More' url='/learn-more' />
