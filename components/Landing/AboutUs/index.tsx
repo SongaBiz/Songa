@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
 import React from 'react';
-import Link from 'next/link';
 import { HeroButtons } from '@/components/Elements/Buttons/buttons';
 
 const AboutUs: React.FC = () => {

@@ -2,9 +2,8 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import { sans_hebrew } from '@/app/ui/fonts';
-import { useState } from 'react';
-import { HeroButtons, StoreButtons } from '@/components/Elements/Buttons/buttons';
-import { AiFillApple, AiOutlineCaretRight } from "react-icons/ai";
+import { HeroButtons } from '@/components/Elements/Buttons/buttons';
+
 
 export const Hero = () => {
     

@@ -1,12 +1,12 @@
 "use client"
 import Image from 'next/image'
 import Link from 'next/link'
-import { ReactComponentElement, useState} from 'react'
-import { AiOutlineArrowRight, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import { useState} from 'react'
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { sans_hebrew } from '@/app/ui/fonts'
 import { usePathname } from 'next/navigation';
 import { clsx } from 'clsx'
-import { useRouter } from 'next/router'
+
 
 const navLinks = [
   {
