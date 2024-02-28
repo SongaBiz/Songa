@@ -1,4 +1,5 @@
-import { NavBar } from '@/components'
+import { NavBar} from '@/components/Elements/NavBar'
+import { LandingFooter} from '@/components'
 import './globals.css'
 import Footer from '@/components/Elements/Footer'
 import 'react-toastify/dist/ReactToastify.css';
@@ -23,6 +24,7 @@ export default function RootLayout({
           {children}
           <Analytics />
           {/* <Footer /> */}
+          <LandingFooter />
         </ToastProvider>
       </body>
     </html>

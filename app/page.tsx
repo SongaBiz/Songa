@@ -20,7 +20,7 @@ export default function Home() {
       {/* <Careers/> */}
       {/* <Blog /> */}
       <RiderRegistration />
-      <LandingFooter />
+      
     </div>
   )
 }
