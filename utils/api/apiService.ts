@@ -144,3 +144,27 @@ export async function uploadDocuments(files: FormData): Promise<CustomResponse<a
       throw { error: 'An error occurred while uploading the documents.' };
     }
   }
+
+// Login API
+export async function apiLoginUser(data: UserLoginResponse): Promise<CustomResponse<any>> {
+  const endpoint = `${BASE_URL}/Account/Login`;
+  const requestOptions: AxiosRequestConfig = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization':`Bearer ${localStorage.getItem('sessionToken')}`,
+    },
+    data: data,
+  };
+  try {
+    const response = await axios(endpoint, requestOptions);
+    toast.success(response.data.message);
+    return response;
+  } catch (e: any) {
+    if (e.response && e.response.data && e.response.data.message){
+      throw e.response.data.message
+    } else {
+      throw { error: 'An error occurred while loggin in' };
+    }
+  }
+}

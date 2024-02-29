@@ -3,6 +3,11 @@ interface CreateUserData {
     password: string;
 }
 
+interface UserLoginResponse {
+    status: string;
+    token: string;
+}
+
 interface CreateRiderProfile {
     location: string;
     address: string;
