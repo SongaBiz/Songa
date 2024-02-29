@@ -1,8 +1,11 @@
-interface CreateRiderData {
-    first_name: string;
-    last_name: string;
-    phone: string;
+interface CreateUserData {
+    username: string;
     password: string;
+}
+
+interface UserLoginResponse {
+    status: string;
+    token: string;
 }
 
 interface CreateRiderProfile {
@@ -19,3 +22,19 @@ interface BikeDetails {
     insuranceProvider: string,
     insurancePolicyNumber: string
 }
+interface CustomerProfile{
+    name: "string",
+    gender: "string"
+}
+interface VehicleProfile {
+    make: "string",
+    model: "string",
+    registrationNumber: "string",
+    insuranceProviderName: "string",
+    insurancePolicyNumber: "string",
+    insurancePolicyExpiryDate: "2024-02-13T08:46:53.014Z"
+}
+
+
+
+  
