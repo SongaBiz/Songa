@@ -11,7 +11,7 @@ import ServicesOffered from '@/components/Landing/ServicesOffered';
 export default function Home() {
   return (
     <div>
-      <Hero />
+      {/* <Hero />
       <Trustees />
       <AboutUs />
       {/* <Partnerships/> */}
@@ -19,7 +19,7 @@ export default function Home() {
       <Mission />
       {/* <Careers/> */}
       {/* <Blog /> */}
-      <RiderRegistration />
+      <RiderRegistration /> 
       
     </div>
   )
